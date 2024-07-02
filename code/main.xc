@@ -498,9 +498,13 @@ function @crafting_loop()
 				$active_crafters += 1
 			$i += 1
 
-		if $quantity_queue.0 <= $inventory_resources.$current_craft
+	if $quantity_queue.0 <= $inventory_resources.$current_craft
 			$item_queue.erase(0)
 			$quantity_queue.erase(0)
+			$i = 1
+			while $i <= $crafter_count
+				output_text("Crafter " & $i :text, 1, "None")
+				$i += 1
 ;	--- Main Functions ---
 
 ;	--- Main ---
