@@ -440,6 +440,12 @@ function @update_screen()
 		else
 			@labled_button($crafting_button_x, $screen.height-$button_h/2, $crafting_button_w, $button_h, "Craft " & $craft_quantity : text & "x", $w_color.border, $w_color.fill, $w_color.text)
 	if $current_tab == "Queue"
+		if @labled_button($screen.width/2, $button_h*$current_line, $screen.width, $button_h, "CLEAR QUEUE", $d_color.border, $d_color.fill, $d_color.text)
+			$item_queue.clear()
+			$quantity_queue.clear()
+			$queued_resources = ""
+		$current_line += 1
+
 		foreach $item_queue ($i, $item)
 			var $remaining_items = $quantity_queue.$i-$inventory_resources.$item
 			var $completion = $inventory_resources.$item/$quantity_queue.$i
