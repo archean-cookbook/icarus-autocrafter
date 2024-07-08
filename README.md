@@ -31,6 +31,7 @@ This is the source code for the Icarus Inc. Autocrafter, found on the [Steam Wor
     * Starts crafting the selected item in the selectet quantity
 
 2. Queue Screen: This screen lists all currently queued items and their quantities with progress bars.
+  - "CLEAR QUEUE" Button empties the queue.
 
 3. Storage Screen: This screen lists all raw resources and three numbers (in kg)
   - Left most number: Amount needed to craft the selected craft
